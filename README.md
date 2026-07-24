@@ -12,7 +12,7 @@ analysis with data-driven marketing recommendations.
 **Key steps:**
 
 - Data Cleaning (Python)
-- Exploratory Data Analysis (EDA) (Python) — Dataset Overview, Missing Stations, Ride Patterns, Temporal Analysis, Statistical Visualizations (R/ggplot2) and Geospatial Analysis
+- Exploratory Data Analysis (EDA) (Python and R/ggplot2)
 - Summary of EDA Findings
 - Top Three Recommendations
 - Conclusion
@@ -36,3 +36,27 @@ Cyclistic is a fictive bike-share company in Chicago. Their director of marketin
 **Note on data context (2025 vs. earlier Divvy/Cyclistic analyses):** readers comparing this analysis to other Cyclistic capstone projects (many of which use 2019-2021 data, the original case study period) should note that the Divvy station network grew substantially in 2025 — Chicago's Department of Transportation and Lyft added or upgraded over 140 stations that year, part of a broader expansion past 1,100 total stations. Station-level findings (e.g., top 10 start/end stations) may not directly match earlier analyses simply because the underlying station network itself has changed and grown. The `rideable_type` (classic/electric bike) and `member`/`casual` rider-type schema used throughout this analysis have been Divvy's standard data structure since 2020 and are not unique to this dataset.
 
 *Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed, analyzed, and redistributed.*
+
+## Approach
+
+EDA findings are summarized and formed the basis for the top three recommendation decisions.
+
+1. **EDA** — Dataset Overview, Missing Stations, Ride Patterns, Temporal Analysis,
+   Statistical Visualizations (R/ggplot2), and Geospatial Analysis. Differences in start-station
+   preferences by rider type, discovered during Ride Patterns, motivated the dedicated
+   geospatial analysis (Folium heatmap and top-stations map).
+2. **Summary** — the main findings were summarized regarding rider composition, ride duration, bike type preference,
+   hourly pattern, weekday vs. weekend behavior, seasonal patterns, and station/geospatial patterns.
+3. **Top Three Recommendations** — Electric bike-focused membership incentives, seasonal & shoulder-month conversion
+   campaigns, landmark & attraction-based membership benefits
+
+## Key Results
+
+- **Overall Rider Composition:** Members are the largest rider type, accounting for 64% of all rides (3,552,530), while casual riders form a substantial minority at 36% (1,994,691).
+- **Ride Duration:** Casual riders ride approximately 7 minutes longer on average (19.10 minutes) than members (11.95 minutes), and show a wider spread of ride durations (IQR: 6.30–21.05 minutes) compared to members (IQR: 5.03–14.50 minutes).
+- **Bike Type Preference:** Both groups prefer electric bikes over classic bikes, with casual riders showing a marginally higher preference (67% vs. 64% for members).
+- **Hourly Pattern:** Members show a clear bimodal pattern — a first peak at 8:00 (approx. 255,000 rides) and a second, higher peak at 17:00 (approx. 380,000 rides) — while casual riders show a unimodal pattern with a single peak at 17:00 (approx. 190,000 rides). This confirms members' commuter behavior versus casual riders' leisure-oriented usage.
+- **Weekday vs. Weekend:** Members ride significantly more on weekdays (approx. 2,720,000 rides, 77% of all member rides); casual riders also lean weekday (approx. 1,251,000 rides, 63% of all casual rides), but far less concentrated. Faceting the hourly pattern by day (R/ggplot2) revealed that members' bimodal, commute-driven pattern on weekdays shifts to a unimodal, leisure-driven pattern on weekends — converging with casual riders' pattern, and confirming members use Cyclistic for two distinct purposes depending on the day.
+- **Seasonal Patterns:** Members show high ridership across all warmer seasons (Summer peak ~1,270,000 rides, 36% of all member rides; Fall ~1,130,000, 32%), while casual riders show a steeper seasonal concentration (Summer peak ~950,000 rides, 48% of all casual rides; Fall drop to ~585,000, 29%). Average ride duration follows the same seasonal shape for both groups but at very different scales — casual riders' duration ranges from ~10-12 minutes (Dec-Feb) to ~21-22 minutes (Jun-Jul), while members range only from ~10-11 to ~13 minutes over the same period.
+- **Station & Geospatial Patterns:** Casual riders prefer touristic and lakefront locations — most-used station DuSable Lake Shore Dr & Monroe St (31,236 rides, ~1.57% of all casual rides), followed by Navy Pier and Streeter Dr & Grand Ave. Members favor central business-district stations — most-used station Kingsbury St & Kinzie St (31,202 rides), followed by Clinton St & Washington Blvd and Clinton St & Madison St. These findings are supported by the Folium heatmap of start locations and the Folium map of top stations. *("Touristic" and "business-district" labels are qualitative interpretations based on station names and Chicago geography, not a field in the data.)*
+- **Overall Key Insight:** across every dimension examined, one consistent divide emerged — members mainly ride for commuting, casual riders mostly use Cyclistic for leisure. This divide directly shapes the recommendations below.
