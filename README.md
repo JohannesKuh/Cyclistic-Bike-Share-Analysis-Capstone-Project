@@ -82,7 +82,7 @@ Power BI, Claude (Anthropic)
 - Dataset provided as part of the Google Data Analytics Certificate 
   on Coursera, publicly available via Divvy's public trip data 
   program (see Dataset section for link)
-- Certificate: [Google Data Analytics Certificate](your-certificate-link-here)
+- Certificate: This project was completed as the capstone for the [Google Data Analytics Professional Certificate](https://www.coursera.org/account/accomplishments/specialization/KNAL6XA5Q632) 🎓 (Google/Coursera) 
 - AI assistance provided by Claude (Anthropic) for code guidance, 
   interpretation refinement, and documentation support
 
