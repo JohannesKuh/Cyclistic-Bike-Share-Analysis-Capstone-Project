@@ -5,10 +5,12 @@ Google Data Analytics Capstone project for the Google Data Analytics Certificate
 
 ## Executive Summary
 
-- Analyzed 5.5M Divvy/Cyclistic bike-share trips (2025 data, City of Chicago) to compare member vs. casual rider behavior and develop a new marketing strategy aimed at maximizing annual memberships
+- Analyzed 5.5M Divvy/Cyclistic bike-share trips (2025 data, City of Chicago) to compare member vs. casual rider behavior
 - Conducted EDA using Python, pandas, R/ggplot2, and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations, and Geospatial Analysis
+- Found a consistent behavioral divide across every dimension examined: members ride for commuting (weekday, bimodal, business-district), casual riders ride for leisure (weekend, summer, lakefront)
 - Top 3 recommendations: electric bike-focused membership incentives, seasonal & shoulder-month conversion campaigns, and landmark & attraction-based membership benefits
 - Limitations & further research: no demographic data (age, sex) for deeper segmentation; station-type classifications ("touristic" vs. "business-district") are qualitative and could be validated against an external POI/land-use dataset; start→end station pairs were not analyzed per-ride (a Sankey flow diagram could test this); single-year data limits time-series validation; recommendations should be A/B tested before a full campaign rollout
+- Business impact: the analysis shows evidence-based targeting (e.g., geospatial analysis reveals station-level conversion opportunities), replaces guesswork and helps prevent failures — poor data and weak strategy contribute to 14% of overall business failures tied directly to marketing ([Cropink](https://cropink.com/failed-marketing-campaigns), 2026)
 
 ## Project Overview
 
