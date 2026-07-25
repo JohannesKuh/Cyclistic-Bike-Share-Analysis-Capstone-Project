@@ -73,3 +73,28 @@ EDA findings are summarized and formed the basis for the top three recommendatio
 - **Seasonal Patterns:** Members show high ridership across all warmer seasons (Summer peak ~1,270,000 rides, 36% of all member rides; Fall ~1,130,000, 32%), while casual riders show a steeper seasonal concentration (Summer peak ~950,000 rides, 48% of all casual rides; Fall drop to ~585,000, 29%). Average ride duration follows the same seasonal shape for both groups but at very different scales — casual riders' duration ranges from ~10-12 minutes (Dec-Feb) to ~21-22 minutes (Jun-Jul), while members range only from ~10-11 to ~13 minutes over the same period.
 - **Station & Geospatial Patterns:** Casual riders prefer touristic and lakefront locations — most-used station DuSable Lake Shore Dr & Monroe St (31,236 rides, ~1.57% of all casual rides), followed by Navy Pier and Streeter Dr & Grand Ave. Members favor central business-district stations — most-used station Kingsbury St & Kinzie St (31,202 rides), followed by Clinton St & Washington Blvd and Clinton St & Madison St. These findings are supported by the Folium heatmap of start locations and the Folium map of top stations. *("Touristic" and "business-district" labels are qualitative interpretations based on station names and Chicago geography, not a field in the data.)*
 - **Overall Key Insight:** across every dimension examined, one consistent divide emerged — members mainly ride for commuting, casual riders mostly use Cyclistic for leisure. This divide directly shapes the recommendations below.
+
+## Tools & Technologies
+Python (pandas, seaborn, matplotlib, folium), R (ggplot2 via rpy2), 
+Power BI, Claude (Anthropic)
+
+## Acknowledgements
+- Dataset provided as part of the Google Data Analytics Certificate 
+  on Coursera, publicly available via Divvy's public trip data 
+  program (see Dataset section for link)
+- Certificate: [Google Data Analytics Certificate](your-certificate-link-here)
+- AI assistance provided by Claude (Anthropic) for code guidance, 
+  interpretation refinement, and documentation support
+
+## License
+This repository's code is licensed under the MIT License (see LICENSE). 
+The dataset (Divvy trip data) is provided by Lyft Bikes and Scooters, LLC 
+("Bikeshare") under [this data license agreement](https://divvybikes.com/data-license-agreement), 
+which permits use for non-commercial purposes provided the data is not 
+represented as current or accurate, and no personally identifiable 
+information is extracted.
+
+## Author
+
+Johannes Kuhaupt, LL.M., PMP
+[LinkedIn](https://www.linkedin.com/in/johanneskuhaupt/) · [GitHub](https://github.com/JohannesKuh/)
