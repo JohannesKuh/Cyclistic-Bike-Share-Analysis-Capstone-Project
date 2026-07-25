@@ -3,19 +3,30 @@
 Google Data Analytics Capstone project for the Google Data Analytics Certificate 
 (Google/Coursera, July 2026) analysing member vs. casual rider behavior.
 
+## Executive Summary
+
+- Analyzed 5.5M Divvy/Cyclistic bike-share trips (2025 data, City of Chicago) to compare member vs. casual rider behavior and develop a new marketing strategy aimed at maximizing annual memberships
+- Conducted EDA using Python, pandas, R/ggplot2, and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations, and Geospatial Analysis
+- Top 3 recommendations: electric bike-focused membership incentives, seasonal & shoulder-month conversion campaigns, and landmark & attraction-based membership benefits
+- Limitations & further research: no demographic data (age, sex) for deeper segmentation; station-type classifications ("touristic" vs. "business-district") are qualitative and could be validated against an external POI/land-use dataset; start→end station pairs were not analyzed per-ride (a Sankey flow diagram could test this); single-year data limits time-series validation; recommendations should be A/B tested before a full campaign rollout
+
 ## Project Overview
 
-The analysis comprised 5.5M Divvy/Cyclistic bike-share trips (2025) comparing member vs. casual rider 
-behavior using Python, pandas, R/ggplot2, and Folium. It includes temporal, geospatial, and statistical 
-analysis with data-driven marketing recommendations.
+The project analyzed member vs. casual rider behavior based on 5.5M Divvy/Cyclistic bike-share trips (2025) using Python, pandas, R/ggplot2, and Folium. The analysis followed these steps:
 
 **Key steps:**
-
-- Data Cleaning (Python)
-- Exploratory Data Analysis (EDA) (Python and R/ggplot2)
-- Summary of EDA Findings
-- Top Three Recommendations
-- Conclusion
+* Imports & Setup (Python)
+* Load & Merge Data (Python)
+* Data Cleaning (Python)
+* EDA — Dataset Overview (Python)
+* EDA — Missing Station Investigation (Python)
+* EDA — Ride Patterns (Python)
+* EDA — Temporal Analysis (Python)
+* EDA — Statistical Visualizations (R/ggplot2)
+* EDA — Geospatial Analysis (Python)
+* Summary of EDA Findings (Python)
+* Top Three Recommendations
+* Conclusion
 
 ## Business Problem
 
