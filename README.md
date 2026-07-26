@@ -32,7 +32,11 @@ The project analyzed member vs. casual rider behavior based on 5.5M Divvy/Cyclis
 
 ## Business Problem
 
-Cyclistic is a fictive bike-share company in Chicago. Their director of marketing wants to maximize the number of annual memberships. For that reason, the data analytics team is asked to analyse the different usage behaviors of casual riders and annual members. Based on the results, the data analytics team should provide recommendations for a new marketing strategy. 
+Cyclistic is a fictive bike-share company in Chicago. Their director of marketing wants to maximize the number of annual memberships. For that reason, the data analytics team is asked to analyze the different usage behaviors of casual riders and annual members. Based on the results, the data analytics team should provide recommendations for a new marketing strategy. The analysis followed three guiding questions, with a primary analytical focus on the first one:
+
+1. How do annual members and casual riders use Cyclistic bikes differently?
+2. Why would casual riders buy Cyclistic annual memberships?
+3. How can Cyclistic use digital media to influence casual riders to become members?
 
 ## Dataset
 
@@ -73,6 +77,14 @@ EDA findings are summarized and formed the basis for the top three recommendatio
 - **Seasonal Patterns:** Members show high ridership across all warmer seasons (Summer peak ~1,270,000 rides, 36% of all member rides; Fall ~1,130,000, 32%), while casual riders show a steeper seasonal concentration (Summer peak ~950,000 rides, 48% of all casual rides; Fall drop to ~585,000, 29%). Average ride duration follows the same seasonal shape for both groups but at very different scales — casual riders' duration ranges from ~10-12 minutes (Dec-Feb) to ~21-22 minutes (Jun-Jul), while members range only from ~10-11 to ~13 minutes over the same period.
 - **Station & Geospatial Patterns:** Casual riders prefer touristic and lakefront locations — most-used station DuSable Lake Shore Dr & Monroe St (31,236 rides, ~1.57% of all casual rides), followed by Navy Pier and Streeter Dr & Grand Ave. Members favor central business-district stations — most-used station Kingsbury St & Kinzie St (31,202 rides), followed by Clinton St & Washington Blvd and Clinton St & Madison St. These findings are supported by the Folium heatmap of start locations and the Folium map of top stations. *("Touristic" and "business-district" labels are qualitative interpretations based on station names and Chicago geography, not a field in the data.)*
 - **Overall Key Insight:** across every dimension examined, one consistent divide emerged — members mainly ride for commuting, casual riders mostly use Cyclistic for leisure. This divide directly shapes the recommendations below.
+
+## Business Recommendations
+
+Based on the key findings above, and with regard to questions 2 (*Why would casual riders buy Cyclistic annual memberships?*) and 3 (*How can Cyclistic use digital media to influence casual riders to become members?*), the top three recommendations are:
+
+- **Electric Bike-Focused Membership Incentives** — Offer members-only discounts on e-bike rentals, partner with manufacturers (e.g., Trek, Specialized) for early access and better support, and promote through co-branded content and affiliate marketing.
+- **Seasonal & Shoulder-Month Conversion Campaigns** — Launch targeted membership promotions in the shoulder months (May-June, September), when casual riders are active but not yet locked into summer-only habits, delivered via timed social media and email campaigns.
+- **Landmark & Attraction-Based Membership Benefits** — Partner with lakefront attractions (Navy Pier, Millennium Park, Shedd Aquarium) and sightseeing cruises for member-exclusive discounts, promoted via geo-targeted ads and station-based QR codes at casual riders' top stations.
 
 ## Tools & Technologies
 Python (pandas, seaborn, matplotlib, folium), R (ggplot2 via rpy2), 
