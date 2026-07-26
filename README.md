@@ -54,6 +54,21 @@ Cyclistic is a fictive bike-share company in Chicago. Their director of marketin
 
 *Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed, analyzed, and redistributed.*
 
+## Setup / Reproducing this Analysis
+
+This repository does not include the raw trip data (12 monthly CSVs, ~5.55M rows total) due to file size. To reproduce this analysis:
+
+1. Download the 12 monthly ZIP files for 2025 from the [Divvy trip data S3 bucket](https://divvy-tripdata.s3.amazonaws.com/index.html)
+2. Extract each ZIP to get the monthly CSV files
+3. Upload the extracted CSVs to a folder in your Google Drive (this notebook was built and run in Google Colab)
+4. Update the `data_path` variable in the "Load & Merge Data" section to point to your own Google Drive folder:
+```python
+   data_path = '/content/drive/MyDrive/<your-folder-path>/'
+```
+5. Run the notebook from the top — the first code cell mounts your Google Drive (`drive.mount('/content/drive')`), and the merge step will automatically load and concatenate all 12 CSVs found in that folder
+
+**Note:** the notebook expects exactly 12 monthly CSV files in the specified folder; the `glob.glob(data_path + '*.csv')` pattern will pick up any CSV present, so avoid placing unrelated CSV files in the same folder.
+
 ## Approach
 
 EDA findings are summarized and formed the basis for the top three recommendation decisions.
