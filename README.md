@@ -17,16 +17,11 @@ Google Data Analytics Capstone project for the Google Data Analytics Certificate
 The project analyzed member vs. casual rider behavior based on 5.5M Divvy/Cyclistic bike-share trips (2025) using Python, pandas, R/ggplot2, and Folium. The analysis followed these steps:
 
 **Key steps:**
-* Imports & Setup (Python)
-* Load & Merge Data (Python)
-* Data Cleaning (Python)
-* EDA — Dataset Overview (Python)
-* EDA — Missing Station Investigation (Python)
-* EDA — Ride Patterns (Python)
-* EDA — Temporal Analysis (Python)
-* EDA — Statistical Visualizations (R/ggplot2)
-* EDA — Geospatial Analysis (Python)
-* Summary of EDA Findings (Python)
+* Imports & Setup
+* Load & Merge Data
+* Data Cleaning
+* Exploratory data analysis (EDA)
+* Summary of EDA Findings
 * Top Three Recommendations
 * Conclusion
 
@@ -73,13 +68,13 @@ This repository does not include the raw trip data (12 monthly CSVs, ~5.55M rows
 
 EDA findings are summarized and formed the basis for the top three recommendation decisions.
 
-1. **EDA** — Dataset Overview, Missing Stations, Ride Patterns, Temporal Analysis,
-   Statistical Visualizations (R/ggplot2), and Geospatial Analysis. Differences in start-station
+1. **EDA** — dataset overview, missing stations, ride patterns, temporal analysis,
+   statistical visualizations (R/ggplot2) and geospatial analysis. Differences in start-station
    preferences by rider type, discovered during Ride Patterns, motivated the dedicated
    geospatial analysis (Folium heatmap and top-stations map).
 2. **Summary** — the main findings were summarized regarding rider composition, ride duration, bike type preference,
    hourly pattern, weekday vs. weekend behavior, seasonal patterns, and station/geospatial patterns.
-3. **Top Three Recommendations** — Electric bike-focused membership incentives, seasonal & shoulder-month conversion
+3. **Top Three Recommendations** — electric bike-focused membership incentives, seasonal & shoulder-month conversion
    campaigns, landmark & attraction-based membership benefits
 
 ## Key Results
@@ -108,6 +103,15 @@ Based on the key findings above, and with regard to questions 2 (*Why would casu
 ![Top 10 Start Stations by Rider Type](images/3_Top_10_Start_Stations_by_Rider_Type.png)
 
 ![Folium Map of Top Stations](images/4_Folium_Map_of_Top_Stations.png)
+
+## Limitations & Further Research
+
+- **No demographic data** — segmentation is limited to member/casual status only
+- **Station classifications are qualitative** — "touristic"/"business-district" labels are name-based, not derived from a land-use dataset
+- **Round-trip behavior unconfirmed** — station overlap suggests it, but per-ride start→end pairs were not tested
+- **Single-year data (2025)** — limits ability to distinguish seasonal trends from one-year anomalies
+- **Station network grew in 2025** — affects comparability with other Cyclistic analyses using different years
+- **Recommendations untested** — an A/B test or pilot rollout would validate real-world impact before a full campaign
 
 ## Tools & Technologies
 Python (pandas, seaborn, matplotlib, folium), R (ggplot2 via rpy2), 
