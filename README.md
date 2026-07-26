@@ -86,6 +86,14 @@ Based on the key findings above, and with regard to questions 2 (*Why would casu
 - **Seasonal & Shoulder-Month Conversion Campaigns** — Launch targeted membership promotions in the shoulder months (May-June, September), when casual riders are active but not yet locked into summer-only habits, delivered via timed social media and email campaigns.
 - **Landmark & Attraction-Based Membership Benefits** — Partner with lakefront attractions (Navy Pier, Millennium Park, Shedd Aquarium) and sightseeing cruises for member-exclusive discounts, promoted via geo-targeted ads and station-based QR codes at casual riders' top stations.
 
+![Rideable Type by Member Type](images/1_Rideable_Type_by_Member_Type.png)
+
+![Rides by Month](images/2_Rides_by_Month.png)
+
+![Top 10 Start Stations by Rider Type](images/3_Top_10_Start_Stations_by_Rider_Type.png)
+
+![Folium Map of Top Stations](images/4_Folium_Map_of_Top_Stations.png)
+
 ## Tools & Technologies
 Python (pandas, seaborn, matplotlib, folium), R (ggplot2 via rpy2), 
 Power BI, Claude (Anthropic)
