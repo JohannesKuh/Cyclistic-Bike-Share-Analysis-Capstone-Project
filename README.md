@@ -1,4 +1,4 @@
-# Cyclistic - Bike-Share-Analysis
+# Cyclistic — Bike-Share-Analysis
 
 Google Data Analytics Capstone project for the Google Data Analytics Certificate (Google/Coursera, July 2026) analyzing member vs. casual rider behavior
 
