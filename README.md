@@ -46,7 +46,7 @@ Cyclistic is a fictive bike-share company in Chicago. Their director of marketin
 
 **Note on data context (2025 vs. earlier Divvy/Cyclistic analyses):** readers comparing this analysis to other Cyclistic capstone projects (many of which use 2019-2021 data, the original case study period) should note that the Divvy station network grew substantially in 2025 — Chicago's Department of Transportation and the ride-sharing company Lyft opened 140 new stations that year, adding more than 2,000 new docks ([WTTW](https://news.wttw.com/2026/01/15/divvy-and-lime-saw-highest-ridership-record-2025-nearly-13m-bike-and-scooter-trips), 2026). Due to this expansion, station-level findings (e.g., top 10 start/end stations) may not directly match earlier analyses. Other data fields, such as `rideable_type` (classic/electric bike) and `member`/`casual` rider-type, are not affected — this schema has been consistently used across public Divvy trip data since at least 2020, based on cross-checking multiple years of published datasets.
 
-*Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed, analyzed and redistributed.*
+*Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed analyzed and redistributed.*
 
 ## Setup / Reproducing this Analysis
 
