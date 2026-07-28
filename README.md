@@ -5,7 +5,7 @@ Google Data Analytics Capstone project for the Google Data Analytics Certificate
 ## Executive Summary
 
 - Analyzed 5.5M Divvy/Cyclistic bike-share trips (2025 data, City of Chicago) to compare member vs. casual rider behavior
-- Conducted EDA using Python, pandas, R/ggplot2 and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations, and Geospatial Analysis
+- Conducted EDA using Python, pandas, R/ggplot2 and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations and Geospatial Analysis
 - Found a consistent behavioral divide across every dimension examined: members ride for commuting (weekday, bimodal, business-district), casual riders ride for leisure (weekend, summer, lakefront)
 - Top 3 recommendations: electric bike-focused membership incentives, seasonal & shoulder-month conversion campaigns and landmark & attraction-based membership benefits
 - Limitations & further research: missing demographic data (age, sex), station-type classifications ("touristic" vs. "business-district") need to be further validated, start→end station pairs were not analyzed per-ride, single-year focus (2025) limits multi-year comparison, recommendations should be A/B tested before rollout
@@ -72,26 +72,26 @@ EDA findings are summarized and formed the basis for the top three recommendatio
    preferences by rider type, discovered during Ride Patterns, motivated the dedicated
    geospatial analysis (Folium heatmap and top-stations map).
 2. **Summary** — The main findings were summarized regarding rider composition, ride duration, bike type preference,
-   hourly pattern, weekday vs. weekend behavior, seasonal patterns, and station/geospatial patterns.
+   hourly pattern, weekday vs. weekend behavior, seasonal patterns and station/geospatial patterns.
 3. **Top Three Recommendations** — Electric bike-focused membership incentives, seasonal & shoulder-month conversion
-   campaigns, and landmark & attraction-based membership benefits.
+   campaigns and landmark & attraction-based membership benefits.
 
 ## Key Results
 
 - **Overall Rider Composition:** Members are the largest rider type, accounting for 64% of all rides (3,552,530), while casual riders form a substantial minority at 36% (1,994,691).
-- **Ride Duration:** Casual riders ride approximately 7 minutes longer on average (19.10 minutes) than members (11.95 minutes), and show a wider spread of ride durations (IQR: 6.30–21.05 minutes) compared to members (IQR: 5.03–14.50 minutes).
+- **Ride Duration:** Casual riders ride approximately 7 minutes longer on average (19.10 minutes) than members (11.95 minutes) and show a wider spread of ride durations (IQR: 6.30–21.05 minutes) compared to members (IQR: 5.03–14.50 minutes).
 - **Bike Type Preference:** Both groups prefer electric bikes over classic bikes, with casual riders showing a marginally higher preference (67% vs. 64% for members).
 - **Hourly Pattern:** Members show a clear bimodal pattern — a first peak at 8:00 (approx. 255,000 rides) and a second, higher peak at 17:00 (approx. 380,000 rides) — while casual riders show a unimodal pattern with a single peak at 17:00 (approx. 190,000 rides). This confirms members' commuter behavior versus casual riders' leisure-oriented usage.
-- **Weekday vs. Weekend:** Members ride significantly more on weekdays (approx. 2,720,000 rides, 77% of all member rides); casual riders also lean weekday (approx. 1,251,000 rides, 63% of all casual rides), but far less concentrated. Faceting the hourly pattern by day (R/ggplot2) revealed that members' bimodal, commute-driven pattern on weekdays shifts to a unimodal, leisure-driven pattern on weekends — converging with casual riders' pattern, and confirming members use Cyclistic for two distinct purposes depending on the day.
+- **Weekday vs. Weekend:** Members ride significantly more on weekdays (approx. 2,720,000 rides, 77% of all member rides); casual riders also lean weekday (approx. 1,251,000 rides, 63% of all casual rides), but far less concentrated. Faceting the hourly pattern by day (R/ggplot2) revealed that members' bimodal, commute-driven pattern on weekdays shifts to a unimodal, leisure-driven pattern on weekends — converging with casual riders' pattern and confirming members use Cyclistic for two distinct purposes depending on the day.
 - **Seasonal Patterns:** Members show high ridership across all warmer seasons (Summer peak ~1,270,000 rides, 36% of all member rides; Fall ~1,130,000, 32%), while casual riders show a steeper seasonal concentration (Summer peak ~950,000 rides, 48% of all casual rides; Fall drop to ~585,000, 29%). Average ride duration follows the same seasonal shape for both groups but at very different scales — casual riders' duration ranges from ~10-12 minutes (Dec-Feb) to ~21-22 minutes (Jun-Jul), while members range only from ~10-11 to ~13 minutes over the same period.
 - **Station & Geospatial Patterns:** Casual riders prefer touristic and lakefront locations — most-used station DuSable Lake Shore Dr & Monroe St (31,236 rides, ~1.57% of all casual rides), followed by Navy Pier and Streeter Dr & Grand Ave. Members favor central business-district stations — most-used station Kingsbury St & Kinzie St (31,202 rides), followed by Clinton St & Washington Blvd and Clinton St & Madison St. These findings are supported by the Folium heatmap of start locations and the Folium map of top stations. *("Touristic" and "business-district" labels are qualitative interpretations based on station names and Chicago geography, not a field in the data.)*
 - **Overall Key Insight:** Across every dimension examined, one consistent divide emerged — members mainly ride for commuting, casual riders mostly use Cyclistic for leisure. This divide directly shapes the recommendations below.
 
 ## Business Recommendations
 
-Based on the key findings above, and with regard to questions 2 (*Why would casual riders buy Cyclistic annual memberships?*) and 3 (*How can Cyclistic use digital media to influence casual riders to become members?*), the top three recommendations are:
+Based on the key findings above and with regard to questions 2 (*Why would casual riders buy Cyclistic annual memberships?*) and 3 (*How can Cyclistic use digital media to influence casual riders to become members?*), the top three recommendations are:
 
-- **Electric Bike-Focused Membership Incentives** — Offer members-only discounts on e-bike rentals, partner with manufacturers (e.g., Trek, Specialized) for early access and better support, and promote through co-branded content and affiliate marketing.
+- **Electric Bike-Focused Membership Incentives** — Offer members-only discounts on e-bike rentals, partner with manufacturers (e.g., Trek, Specialized) for early access and better support and promote through co-branded content and affiliate marketing.
 - **Seasonal & Shoulder-Month Conversion Campaigns** — Launch targeted membership promotions in the shoulder months (May-June, September), when casual riders are active but not yet locked into summer-only habits, delivered via timed social media and email campaigns.
 - **Landmark & Attraction-Based Membership Benefits** — Partner with lakefront attractions (Navy Pier, Millennium Park, Shedd Aquarium) and sightseeing cruises for member-exclusive discounts, promoted via geo-targeted ads and station-based QR codes at casual riders' top stations.
 
@@ -123,14 +123,14 @@ Python (pandas, seaborn, matplotlib, folium), R (via rpy2 integration in Google 
   program (see Dataset section for link)
 - Certificate: This project was completed as the capstone for the [Google Data Analytics Professional Certificate](https://www.coursera.org/account/accomplishments/specialization/KNAL6XA5Q632) 🎓 (Google/Coursera) 
 - AI assistance provided by Claude (Anthropic) for code guidance, 
-  interpretation refinement, and documentation support
+  interpretation refinement and documentation support
 
 ## License
 This repository's code is licensed under the MIT License (see LICENSE). 
 The dataset (Divvy trip data) is provided by Lyft Bikes and Scooters, LLC 
 ("Bikeshare") under [this data license agreement](https://divvybikes.com/data-license-agreement), 
 which permits use for non-commercial purposes provided the data is not 
-represented as current or accurate, and no personally identifiable 
+represented as current or accurate and no personally identifiable 
 information is extracted.
 
 ## Author
