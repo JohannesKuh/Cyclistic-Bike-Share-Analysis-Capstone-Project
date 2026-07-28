@@ -1,7 +1,6 @@
 # Cyclistic-Bike-Share-Analysis-Capstone-Project
 
-Google Data Analytics Capstone project for the Google Data Analytics Certificate 
-(Google/Coursera, July 2026) analysing member vs. casual rider behavior.
+Google Data Analytics Capstone project for the Google Data Analytics Certificate (Google/Coursera, July 2026) analysing member vs. casual rider behavior
 
 ## Executive Summary
 
