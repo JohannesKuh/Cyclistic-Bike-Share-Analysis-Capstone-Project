@@ -9,7 +9,7 @@ Google Data Analytics Capstone project for the Google Data Analytics Certificate
 - Conducted EDA using Python, pandas, R/ggplot2, and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations, and Geospatial Analysis
 - Found a consistent behavioral divide across every dimension examined: members ride for commuting (weekday, bimodal, business-district), casual riders ride for leisure (weekend, summer, lakefront)
 - Top 3 recommendations: electric bike-focused membership incentives, seasonal & shoulder-month conversion campaigns, and landmark & attraction-based membership benefits
-- Limitations & further research: demographic data are missing (age, sex) preventing a deeper segmentation; station-type classifications ("touristic" vs. "business-district") are qualitative and could be validated against an external POI/land-use dataset; start→end station pairs were not analyzed per-ride (a Sankey flow diagram could test this); single-year data limits time-series validation; recommendations should be A/B tested before a full campaign rollout
+- Limitations & further research: missing demographic data (age, sex), station-type classifications ("touristic" vs. "business-district") need to be further validated, start→end station pairs were not analyzed per-ride, single-year focus (2025) limits multi-year comparison, recommendations should be A/B tested before rollout
 - Business impact: the analysis shows evidence-based targeting (e.g., geospatial analysis reveals station-level conversion opportunities), replaces guesswork and helps prevent failures — poor data and weak strategy contribute to 14% of overall business failures tied directly to marketing ([Cropink](https://cropink.com/failed-marketing-campaigns), 2026)
 
 ## Project Overview
@@ -68,14 +68,14 @@ This repository does not include the raw trip data (12 monthly CSVs, ~5.55M rows
 
 EDA findings are summarized and formed the basis for the top three recommendation decisions.
 
-1. **EDA** — dataset overview, missing stations, ride patterns, temporal analysis,
+1. **EDA** — Dataset overview, missing stations, ride patterns, temporal analysis,
    statistical visualizations (R/ggplot2) and geospatial analysis. Differences in start-station
    preferences by rider type, discovered during Ride Patterns, motivated the dedicated
    geospatial analysis (Folium heatmap and top-stations map).
-2. **Summary** — the main findings were summarized regarding rider composition, ride duration, bike type preference,
+2. **Summary** — The main findings were summarized regarding rider composition, ride duration, bike type preference,
    hourly pattern, weekday vs. weekend behavior, seasonal patterns, and station/geospatial patterns.
-3. **Top Three Recommendations** — electric bike-focused membership incentives, seasonal & shoulder-month conversion
-   campaigns, landmark & attraction-based membership benefits
+3. **Top Three Recommendations** — Electric bike-focused membership incentives, seasonal & shoulder-month conversion
+   campaigns, and landmark & attraction-based membership benefits.
 
 ## Key Results
 
@@ -86,7 +86,7 @@ EDA findings are summarized and formed the basis for the top three recommendatio
 - **Weekday vs. Weekend:** Members ride significantly more on weekdays (approx. 2,720,000 rides, 77% of all member rides); casual riders also lean weekday (approx. 1,251,000 rides, 63% of all casual rides), but far less concentrated. Faceting the hourly pattern by day (R/ggplot2) revealed that members' bimodal, commute-driven pattern on weekdays shifts to a unimodal, leisure-driven pattern on weekends — converging with casual riders' pattern, and confirming members use Cyclistic for two distinct purposes depending on the day.
 - **Seasonal Patterns:** Members show high ridership across all warmer seasons (Summer peak ~1,270,000 rides, 36% of all member rides; Fall ~1,130,000, 32%), while casual riders show a steeper seasonal concentration (Summer peak ~950,000 rides, 48% of all casual rides; Fall drop to ~585,000, 29%). Average ride duration follows the same seasonal shape for both groups but at very different scales — casual riders' duration ranges from ~10-12 minutes (Dec-Feb) to ~21-22 minutes (Jun-Jul), while members range only from ~10-11 to ~13 minutes over the same period.
 - **Station & Geospatial Patterns:** Casual riders prefer touristic and lakefront locations — most-used station DuSable Lake Shore Dr & Monroe St (31,236 rides, ~1.57% of all casual rides), followed by Navy Pier and Streeter Dr & Grand Ave. Members favor central business-district stations — most-used station Kingsbury St & Kinzie St (31,202 rides), followed by Clinton St & Washington Blvd and Clinton St & Madison St. These findings are supported by the Folium heatmap of start locations and the Folium map of top stations. *("Touristic" and "business-district" labels are qualitative interpretations based on station names and Chicago geography, not a field in the data.)*
-- **Overall Key Insight:** across every dimension examined, one consistent divide emerged — members mainly ride for commuting, casual riders mostly use Cyclistic for leisure. This divide directly shapes the recommendations below.
+- **Overall Key Insight:** Across every dimension examined, one consistent divide emerged — members mainly ride for commuting, casual riders mostly use Cyclistic for leisure. This divide directly shapes the recommendations below.
 
 ## Business Recommendations
 
