@@ -115,8 +115,7 @@ This analysis has the following shortcomings that show the path for further rese
 - **Recommendations untested** — An A/B test or pilot rollout would validate real-world impact before a full campaign.
 
 ## Tools & Technologies
-Python (pandas, seaborn, matplotlib, folium), R (ggplot2 via rpy2), 
-Power BI, Claude (Anthropic)
+Python (pandas, seaborn, matplotlib, folium), R (via rpy2 integration in Google Colab), Claude (Anthropic)
 
 ## Acknowledgements
 - Dataset provided as part of the Google Data Analytics Certificate 
