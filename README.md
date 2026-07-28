@@ -45,7 +45,7 @@ Cyclistic is a fictive bike-share company in Chicago. Their director of marketin
 
 **Note on demographic data:** the Divvy Trips documentation states that subscriber-pass trips may include basic demographic fields (age, gender). However, the 2025 extract used in this analysis does not include any demographic columns — only trip, station, and rider-type (member/casual) data are present.
 
-**Note on data context (2025 vs. earlier Divvy/Cyclistic analyses):** readers comparing this analysis to other Cyclistic capstone projects (many of which use 2019-2021 data, the original case study period) should note that the Divvy station network grew substantially in 2025 — Chicago's Department of Transportation and Lyft added or upgraded over 140 stations that year, part of a broader expansion past 1,100 total stations. Station-level findings (e.g., top 10 start/end stations) may not directly match earlier analyses simply because the underlying station network itself has changed and grown. The `rideable_type` (classic/electric bike) and `member`/`casual` rider-type schema used throughout this analysis have been Divvy's standard data structure since 2020 and are not unique to this dataset.
+**Note on data context (2025 vs. earlier Divvy/Cyclistic analyses):** readers comparing this analysis to other Cyclistic capstone projects (many of which use 2019-2021 data, the original case study period) should note that the Divvy station network grew substantially in 2025 — Chicago's Department of Transportation and the ride-sharing company Lyft opened 140 new stations that year, adding more than 2,000 new docks ([WTTW](https://news.wttw.com/2026/01/15/divvy-and-lime-saw-highest-ridership-record-2025-nearly-13m-bike-and-scooter-trips), 2026). Due to this expansion, station-level findings (e.g., top 10 start/end stations) may not directly match earlier analyses. Other data fields, such as `rideable_type` (classic/electric bike) and `member`/`casual` rider-type, are not affected — this schema has been consistently used across public Divvy trip data since at least 2020, based on cross-checking multiple years of published datasets.
 
 *Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed, analyzed, and redistributed.*
 
@@ -106,12 +106,14 @@ Based on the key findings above, and with regard to questions 2 (*Why would casu
 
 ## Limitations & Further Research
 
-- **No demographic data** — segmentation is limited to member/casual status only
-- **Station classifications are qualitative** — "touristic"/"business-district" labels are name-based, not derived from a land-use dataset
-- **Round-trip behavior unconfirmed** — station overlap suggests it, but per-ride start→end pairs were not tested
-- **Single-year data (2025)** — limits ability to distinguish seasonal trends from one-year anomalies
-- **Station network grew in 2025** — affects comparability with other Cyclistic analyses using different years
-- **Recommendations untested** — an A/B test or pilot rollout would validate real-world impact before a full campaign
+This analysis has the following shortcomings that show the path for further research:
+
+- **No demographic data** — Segmentation is limited to member/casual status only.
+- **Station classifications are qualitative** — "Touristic"/"business-district" labels are name-based, not derived from a land-use dataset.
+- **Round-trip behavior unconfirmed** — Station overlap suggests it, but per-ride start→end pairs were not tested.
+- **Single-year data (2025)** — Limits ability to distinguish seasonal trends from one-year anomalies.
+- **Station network grew in 2025** — Affects comparability with other Cyclistic analyses using different years.
+- **Recommendations untested** — An A/B test or pilot rollout would validate real-world impact before a full campaign.
 
 ## Tools & Technologies
 Python (pandas, seaborn, matplotlib, folium), R (ggplot2 via rpy2), 
