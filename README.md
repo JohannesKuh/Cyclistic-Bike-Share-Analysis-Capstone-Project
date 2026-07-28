@@ -5,15 +5,15 @@ Google Data Analytics Capstone project for the Google Data Analytics Certificate
 ## Executive Summary
 
 - Analyzed 5.5M Divvy/Cyclistic bike-share trips (2025 data, City of Chicago) to compare member vs. casual rider behavior
-- Conducted EDA using Python, pandas, R/ggplot2, and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations, and Geospatial Analysis
+- Conducted EDA using Python, pandas, R/ggplot2 and Folium across six areas: Dataset Overview, Missing Station Investigation, Ride Patterns, Temporal Analysis, Statistical Visualizations, and Geospatial Analysis
 - Found a consistent behavioral divide across every dimension examined: members ride for commuting (weekday, bimodal, business-district), casual riders ride for leisure (weekend, summer, lakefront)
-- Top 3 recommendations: electric bike-focused membership incentives, seasonal & shoulder-month conversion campaigns, and landmark & attraction-based membership benefits
+- Top 3 recommendations: electric bike-focused membership incentives, seasonal & shoulder-month conversion campaigns and landmark & attraction-based membership benefits
 - Limitations & further research: missing demographic data (age, sex), station-type classifications ("touristic" vs. "business-district") need to be further validated, start→end station pairs were not analyzed per-ride, single-year focus (2025) limits multi-year comparison, recommendations should be A/B tested before rollout
 - Business impact: the analysis shows evidence-based targeting (e.g., geospatial analysis reveals station-level conversion opportunities), replaces guesswork and helps prevent failures — poor data and weak strategy contribute to 14% of overall business failures tied directly to marketing ([Cropink](https://cropink.com/failed-marketing-campaigns), 2026)
 
 ## Project Overview
 
-The project analyzed member vs. casual rider behavior based on 5.5M Divvy/Cyclistic bike-share trips (2025) using Python, pandas, R/ggplot2, and Folium. The analysis followed these steps:
+The project analyzed member vs. casual rider behavior based on 5.5M Divvy/Cyclistic bike-share trips (2025) using Python, pandas, R/ggplot2 and Folium. The analysis followed these steps:
 
 **Key steps:**
 * Imports & Setup
@@ -42,11 +42,11 @@ Cyclistic is a fictive bike-share company in Chicago. Their director of marketin
 
 **Fields used:** `ride_id`, `rideable_type`, `started_at`, `ended_at`, `start_station_name`/`id`, `end_station_name`/`id`, `start_lat`/`lng`, `end_lat`/`lng`, `member_casual`
 
-**Note on demographic data:** the Divvy Trips documentation states that subscriber-pass trips may include basic demographic fields (age, gender). However, the 2025 extract used in this analysis does not include any demographic columns — only trip, station, and rider-type (member/casual) data are present.
+**Note on demographic data:** the Divvy Trips documentation states that subscriber-pass trips may include basic demographic fields (age, gender). However, the 2025 extract used in this analysis does not include any demographic columns — only trip, station and rider-type (member/casual) data are present.
 
 **Note on data context (2025 vs. earlier Divvy/Cyclistic analyses):** readers comparing this analysis to other Cyclistic capstone projects (many of which use 2019-2021 data, the original case study period) should note that the Divvy station network grew substantially in 2025 — Chicago's Department of Transportation and the ride-sharing company Lyft opened 140 new stations that year, adding more than 2,000 new docks ([WTTW](https://news.wttw.com/2026/01/15/divvy-and-lime-saw-highest-ridership-record-2025-nearly-13m-bike-and-scooter-trips), 2026). Due to this expansion, station-level findings (e.g., top 10 start/end stations) may not directly match earlier analyses. Other data fields, such as `rideable_type` (classic/electric bike) and `member`/`casual` rider-type, are not affected — this schema has been consistently used across public Divvy trip data since at least 2020, based on cross-checking multiple years of published datasets.
 
-*Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed, analyzed, and redistributed.*
+*Data license: this repository's code is MIT-licensed (see LICENSE), but the underlying Divvy trip data remains subject to the [Divvy Data License Agreement](https://divvybikes.com/data-license-agreement), which governs how the data may be accessed, analyzed and redistributed.*
 
 ## Setup / Reproducing this Analysis
 
@@ -59,7 +59,7 @@ This repository does not include the raw trip data (12 monthly CSVs, ~5.55M rows
 ```python
    data_path = '/content/drive/MyDrive/<your-folder-path>/'
 ```
-5. Run the notebook from the top — the first code cell mounts your Google Drive (`drive.mount('/content/drive')`), and the merge step will automatically load and concatenate all 12 CSVs found in that folder
+5. Run the notebook from the top — the first code cell mounts your Google Drive (`drive.mount('/content/drive')`) and the merge step will automatically load and concatenate all 12 CSVs found in that folder
 
 **Note:** the notebook expects exactly 12 monthly CSV files in the specified folder; the `glob.glob(data_path + '*.csv')` pattern will pick up any CSV present, so avoid placing unrelated CSV files in the same folder.
 
