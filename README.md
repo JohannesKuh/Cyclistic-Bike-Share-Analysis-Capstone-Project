@@ -19,7 +19,7 @@ The project analyzed member vs. casual rider behavior based on 5.5M Divvy/Cyclis
 * Imports & Setup
 * Load & Merge Data
 * Data Cleaning
-* Exploratory data analysis (EDA)
+* Exploratory Data Analysis (EDA)
 * Summary of EDA Findings
 * Top Three Recommendations
 * Conclusion
